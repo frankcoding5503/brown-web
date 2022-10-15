@@ -1,0 +1,84 @@
+@import 'config';
+@import 'menu';
+@import 'home';
+@import 'about';
+@import 'project';
+@import 'contact';
+@import 'responsive';
+
+a {
+  display: block;
+  text-decoration: none;
+  color: $DarkBrown;
+}
+li {
+  list-style-type: none;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 2.8125rem;
+}
+h2 {
+  font-weight: 700;
+  font-size: 1.875rem;
+}
+p {
+  letter-spacing: 1.5px;
+  font-weight: 400;
+  font-size: 0.75rem;
+}
+
+.h1_extra {
+  font-weight: 700;
+  font-size: 0.625rem;
+}
+.h2_extra {
+  font-weight: 700;
+  font-size: 1.125rem;
+}
+
+.article-title {
+  font-weight: 700;
+  font-size: 1.125rem;
+}
+
+.view {
+  width: 100vw;
+  height: fit-content;
+  min-height: 92vh;
+  padding: 0px 18px;
+  
+  overflow: hidden;
+} 
+
+.badge {
+  width: fit-content;
+  padding: 6px 24px;
+
+  background-color: $MainOrange;
+  border-radius: 10px;
+  
+  text-align: center;
+  color: $DarkBrown;
+}
+
+button {
+  outline: none;
+  border: none;
+
+  width: fit-content;
+  padding: 8px 16px;
+  background-color: $MainOrange;
+
+  border-radius: 10px;
+  text-align: center;
+  letter-spacing: 2px;
+  color: $DarkBrown;
+
+  &:hover {
+    @include transition-ease(0.2s);
+    color: $MainOrange;
+    background-color: $DarkBrown;
+  }
+}

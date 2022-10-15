@@ -1,0 +1,47 @@
+$DarkBrown: #514538;
+$LightBrown: #AB8B67;
+$grayBrown: #B8A99A;
+$MainOrange: #F2B770;
+$PlainOrange: #FFF7E9;
+$white: #F5F5F5;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #FFF7E9;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+@mixin Flex_Center($direction) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin transition-ease($time) {
+  transition: all $time ease-in-out;
+}
+
+@mixin media-md {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+@mixin media-lg {
+  @media screen and (min-width: 1024px) {
+    @content;
+  }
+}
+@mixin media-xl {
+  @media screen and (min-width: 1600px) {
+    @content;
+  }
+}

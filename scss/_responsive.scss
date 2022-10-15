@@ -1,0 +1,149 @@
+@include media-md {
+  /*base setting*/
+  html { font-size: 20px; }
+  .view { padding: 0px 20px; } 
+  /************/ 
+
+  /*menu part*/
+  header {
+    .menu-logo img {
+      width: 60px;
+    }
+    .menu-btn {
+      display: none;
+    }
+  }
+  .nav {
+    height: 100%;
+    background-color: transparent;
+
+    position: static;
+    transform: translateX(0);
+    justify-content: end;
+    
+    .menu-nav {
+      display: flex;
+      & li {
+        font-size: 20px;
+        margin: 0 12px;
+      }
+    }
+  }
+  /************/
+
+  /*home*/
+  .home {
+    &__title{
+      width: 55vw;
+    }
+    &__rightCol {
+      & .circle{
+        width: 35vw;
+        height: 50vh;
+
+        border-radius: 0%;
+        
+        top: 40vh;
+        left: -10%;
+        margin-left: 0px;
+      }
+    } 
+  }
+  /************/
+
+    /*about*/
+    .about {
+      &__content {
+        width: 80vw;
+      }
+    }
+    /************/
+
+    /*project*/
+    .project {
+      &__cardDeck {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+      }
+    }
+    /************/
+
+    /*contact*/
+    /************/
+}
+
+
+@include media-lg {
+  /*base setting*/
+  html { font-size: 24px; }
+  .view { padding: 0px 24px; } 
+  /************/ 
+
+  /*menu*/
+  header {
+    .menu-logo img {
+      width: 60px;
+    }
+  }
+  /************/ 
+
+  /*home*/
+  .home {
+    &__rightCol {
+      & .circle{
+        width: 30vw;
+        height: 70vh;
+        
+        top: 15vh;
+        left: 40%;
+      }
+    } 
+  }
+  /************/
+
+  /*about*/
+  .about {
+    &__sign {
+      & img {
+        width: 180px;
+      }
+    }
+    &__quote {
+      max-width: 600px;
+      height: 95px;
+    }
+  }
+  /************/
+
+  /*project*/
+  .project {
+    &__cardDeck {
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+  }
+  /************/
+}
+
+@include media-xl {
+  /*base setting*/
+  html { font-size: 28px; }
+  .view { padding: 0px 28px; } 
+  /************/ 
+
+  /*about*/
+  .about {
+    &__content {
+      width: 60vw;
+    }
+  }
+  /************/
+
+  /*project*/
+  .project {
+    &__cardDeck {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+  /************/
+}

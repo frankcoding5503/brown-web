@@ -1,0 +1,62 @@
+.about {
+  @include Flex_Center(column);
+  & .badge {
+    margin-top: 30px; //position
+  }
+  &__imageBox {
+    width: 168px;
+    aspect-ratio: 1 / 1;
+    margin-top: 20px; //position
+    
+    background-color: $DarkBrown;
+    border-radius: 50%;
+    @include Flex_Center(column);
+    
+    & img { width: 117px; }
+  }
+
+  &__content {
+      margin-top: 20px; //position
+
+      @include Flex_Center(column);
+      & h2 {
+        color: $DarkBrown; //color
+        text-align: center;
+      }
+      & p {
+        color: $LightBrown; //color
+        margin-top: 12px;
+      }
+  }
+
+  &__sign {
+    margin-top: 15px; //position
+    & img {
+      width: 133px;
+    }
+  }
+
+  &__quote {
+    width: 60vw;
+    max-width: 450px;
+    height: 70px;
+    margin: 30px 0; //position
+
+    @include Flex_Center(column);
+
+    padding: 8px 24px;
+    border-radius: 12px;
+    background-color: $MainOrange;
+
+    color: $PlainOrange; //color
+
+    font-style: italic;
+  }
+}
+
+.experience {
+  display: grid;
+  background-color: $LightBrown;
+  grid-template-columns: 1fr;
+  padding: 10px 18px;
+}

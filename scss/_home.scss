@@ -1,0 +1,39 @@
+.home {
+  display: flex;
+
+  &__title{
+    width: 60vw;
+    margin-top: 10vh; //position
+    z-index: 2;
+
+    & h1 {
+      color: $DarkBrown; //color
+    }
+    & .h1_extra {
+      color: $LightBrown; //color
+    }
+  }
+  &__rightCol {
+    width: 60vw;
+    height: 92vh;
+    
+    position: absolute;
+    right: 0;
+    
+    background-color: $MainOrange;
+
+    & .circle{
+      width: 140px;
+      height: 140px;
+
+      background-color: $white;
+      border-radius: 50%;
+      
+      position: absolute;
+      top: 55vh;
+      left: 50%;
+      
+      margin-left: -70px;
+    }
+  }
+}

@@ -1,0 +1,83 @@
+header {
+  width: 100vw;
+  height: 8vh;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  position: sticky;
+  top: 0;
+  z-index: 99;
+
+  padding: 8px 16px;
+  background-color: rgba(255,255,255,0.7);
+
+  .menu-logo img {
+    display: block;
+    width: 55px;
+    border-radius: 50%;
+  }
+  .menu-btn {    
+    width: 30px;
+    height: 30px;
+    z-index: 101;
+    
+    @include transition-ease(0.3s);
+    @include Flex_Center(column);
+    transform-origin: center;
+
+    &_hamburger {
+      width: 100%;
+      height: 3px;
+      
+      background-color: $DarkBrown;
+      position: relative;
+
+      &::after, &::before {
+        content: ' ';
+
+        width: 100%;
+        height: inherit;
+        background-color: $DarkBrown;
+        
+        position: absolute;
+      }
+      &::after { top: 10px; }
+      &::before { top: -10px; }
+    }
+  }
+}
+
+.nav {
+  width: 100vw;
+  height: 92vh;
+  z-index: 100;
+  @include Flex_Center(row);
+  background-color: rgba($LightBrown, $alpha: 0.9);
+
+  position: absolute;
+  top: 8vh;
+  left: 0;
+
+  transform: translateX(100%);
+  @include transition-ease(0.3s);
+
+  .menu-nav {
+    & li {
+      font-size: 30px;
+      margin-bottom: 25px;
+    }
+  }
+}
+
+.open_menu {
+  transform: translateX(0);
+}
+.menuBtn_change {
+  transform: rotate(-270deg);
+}
+.active a {
+  color: $MainOrange;
+}
